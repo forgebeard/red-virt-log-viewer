@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import os
 from typing import Dict, List, Tuple
 
 from ..core.models import EntityEventsResult, SearchSummary, SessionSettings, TimelineResult
@@ -87,7 +86,7 @@ def render_session(session: Session) -> str:
         lines.append("Index: not built yet. Open a folder or run Rebuild Index.")
     lines.append("")
     lines.append("Session follows the folders in this window. Index is reused for the same path.")
-    lines.append("Stage 4: Show Timeline and Events Around. Not a diagnosis.")
+    lines.append("MVP 0.1: Find Object, Show Timeline, Events Around. Not a diagnosis.")
     lines.append("Use Tools → RED Virt Log Viewer → Find Object or Search Text.")
     lines.append("")
     notable = [
@@ -294,4 +293,5 @@ def render_timeline(
 
 
 def package_name() -> str:
-    return os.path.basename(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    """Sublime Packages folder must be this name (symlink target may differ)."""
+    return "RedVirtLogViewer"

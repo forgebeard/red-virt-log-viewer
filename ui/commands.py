@@ -108,6 +108,22 @@ def _folder_fingerprint(paths) -> tuple:
     return tuple(sorted(normalize_root(path) for path in paths if path))
 
 
+def _is_tickets_catalog(paths, settings: SessionSettings) -> bool:
+    return folders_are_tickets_root(paths, settings.tickets_root)
+
+
+def _reject_tickets_catalog(window, paths, settings: SessionSettings) -> bool:
+    if not _is_tickets_catalog(paths, settings):
+        return False
+    sublime.error_message(
+        "RED Virt: open a ticket folder inside tickets_root, not the tickets catalog itself"
+    )
+    window.status_message(
+        "RED Virt: open a ticket folder inside tickets_root, not the tickets catalog itself"
+    )
+    return True
+
+
 def _bind_session(window, session: Session) -> None:
     previous = _session(window)
     if previous is not None and previous.session_id != session.session_id:
@@ -122,10 +138,7 @@ def sync_window(window) -> None:
     if not folders:
         return
     settings = load_settings()
-    if folders_are_tickets_root(folders, settings.tickets_root):
-        window.status_message(
-            "RED Virt: open a ticket folder inside tickets_root, not the tickets catalog itself"
-        )
+    if _reject_tickets_catalog(window, folders, settings):
         return
     fingerprint = _folder_fingerprint(folders)
     session = _session(window)
@@ -149,7 +162,10 @@ def detach_window(window) -> None:
 
 def open_support_folder(window) -> None:
     def on_path(path: str) -> None:
-        session = create_session(load_settings(), root_paths=[path])
+        settings = load_settings()
+        if _reject_tickets_catalog(window, [path], settings):
+            return
+        session = create_session(settings, root_paths=[path])
         _bind_session(window, session)
         discover_and_show(window, session)
 
@@ -163,8 +179,11 @@ def add_support_folder(window) -> None:
         return
 
     def on_path(path: str) -> None:
+        settings = load_settings()
+        if _reject_tickets_catalog(window, [path], settings):
+            return
         roots = [bundle.root_path for bundle in session.bundles] + [path]
-        combined = create_session(load_settings(), root_paths=roots)
+        combined = create_session(settings, root_paths=roots)
         _bind_session(window, combined)
         discover_and_show(window, combined)
 

@@ -2,7 +2,7 @@
 
 Этот документ предназначен для учёта стороннего кода, шаблонов и других материалов, включённых в RED Virt Log Viewer.
 
-> **Статус: этап 2.** В `parsers/engine.py` и `parsers/vdsm.py` использованы адаптированные шаблоны `@engine` и `@vdsm` из `format_templates.txt`. Копия лицензии: `licenses/ovirt-log-analyzer-Apache-2.0.txt`.
+> **Статус: MVP 0.1.** В `parsers/engine.py` и `parsers/vdsm.py` использованы адаптированные шаблоны `@engine` и `@vdsm` из `format_templates.txt`. Копия лицензии должна входить в пакет: `licenses/ovirt-log-analyzer-Apache-2.0.txt`.
 
 ## 1. Исследованный источник: ovirt-log-analyzer
 
