@@ -1,0 +1,18 @@
+%YAML 1.2
+---
+name: RED Virt Results
+hidden: true
+version: 2
+scope: text.redvirt.results
+contexts:
+  main:
+    - match: '^RED Virt.*'
+      scope: markup.heading.redvirt
+    - match: '^INCOMPLETE:.*'
+      scope: invalid.redvirt
+    - match: '^\[[^\]]+\]'
+      scope: entity.name.tag.redvirt
+    - match: '^\s+\(none\)$'
+      scope: comment.line.redvirt
+    - match: '^\(no matches\)$'
+      scope: comment.line.redvirt

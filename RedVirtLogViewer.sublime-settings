@@ -1,0 +1,15 @@
+{
+  "encoding": "utf-8",
+  "page_size": 200,
+  "max_line_bytes": 1048576,
+  "fragment_context_lines": 40,
+  "sniff_bytes": 8192,
+  "case_sensitive": true,
+  "direct_open_max_bytes": 33554432,
+  "event_preview_chars": 1024,
+  "sniff_lines": 40,
+  "native_folder_dialog": false,
+  "tickets_root": "",
+  "journal_year": "",
+  "journal_utc_offset": ""
+}

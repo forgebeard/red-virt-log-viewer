@@ -1,0 +1,5 @@
+2026-07-13 00:00:08,676+10 INFO  [org.ovirt.engine] (thread) [] host-demo-01.example.test connected
+2026-01-01 12:00:00,000+03:30 WARN  [org.ovirt.engine] (thread) [] timezone half-hour
+java.lang.RuntimeException: synthetic
+	at org.example.Foo.bar(Foo.java:1)
+2026-07-13 00:00:09,000+10 ERROR [org.ovirt.engine] (thread) [cid-1] second event

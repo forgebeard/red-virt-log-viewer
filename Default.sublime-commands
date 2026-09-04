@@ -1,0 +1,42 @@
+[
+  {
+    "caption": "RED Virt: Open Support Folder",
+    "command": "red_virt_open_support_folder"
+  },
+  {
+    "caption": "RED Virt: Add Support Folder",
+    "command": "red_virt_add_support_folder"
+  },
+  {
+    "caption": "RED Virt: Show Session",
+    "command": "red_virt_show_session"
+  },
+  {
+    "caption": "RED Virt: Search Text",
+    "command": "red_virt_search_text"
+  },
+  {
+    "caption": "RED Virt: Find Object",
+    "command": "red_virt_find_object"
+  },
+  {
+    "caption": "RED Virt: Show Timeline",
+    "command": "red_virt_show_timeline"
+  },
+  {
+    "caption": "RED Virt: Events Around",
+    "command": "red_virt_events_around"
+  },
+  {
+    "caption": "RED Virt: Cancel Operation",
+    "command": "red_virt_cancel_operation"
+  },
+  {
+    "caption": "RED Virt: Rebuild Index",
+    "command": "red_virt_rebuild_index"
+  },
+  {
+    "caption": "RED Virt: Clear Session Cache",
+    "command": "red_virt_clear_session_cache"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "tools",
+    "children": [
+      {
+        "caption": "RED Virt Log Viewer",
+        "children": [
+          { "caption": "Open Support Folder", "command": "red_virt_open_support_folder" },
+          { "caption": "Add Support Folder", "command": "red_virt_add_support_folder" },
+          { "caption": "Show Session", "command": "red_virt_show_session" },
+          { "caption": "Search Text", "command": "red_virt_search_text" },
+          { "caption": "Find Object", "command": "red_virt_find_object" },
+          { "caption": "Show Timeline", "command": "red_virt_show_timeline" },
+          { "caption": "Events Around", "command": "red_virt_events_around" },
+          { "caption": "Cancel Operation", "command": "red_virt_cancel_operation" },
+          { "caption": "Rebuild Index", "command": "red_virt_rebuild_index" },
+          { "caption": "Clear Session Cache", "command": "red_virt_clear_session_cache" }
+        ]
+      }
+    ]
+  }
+]

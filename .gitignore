@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+.env
+*.sublime-workspace
+.cache/
+.red-virt-log-viewer/

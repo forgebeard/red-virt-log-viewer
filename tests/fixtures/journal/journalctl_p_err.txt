@@ -1,0 +1,5 @@
+-----info journalctl -p err -----
+
+Oct 10 12:50:50 host-demo-01.example.test systemd[1]: Failed to start x
+-- Boot abcdefabcdefabcdefabcdefabcdefab --
+Oct 10 13:39:37 host-demo-01.example.test sshd[1]: error: disconnect

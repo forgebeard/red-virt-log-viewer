@@ -1,0 +1,9 @@
+[
+  {
+    "keys": ["enter"],
+    "command": "red_virt_open_result",
+    "context": [
+      { "key": "setting.red_virt_results", "operator": "equal", "operand": true }
+    ]
+  }
+]
